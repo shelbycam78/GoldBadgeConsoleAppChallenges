@@ -35,6 +35,7 @@ namespace KomodoCafe.REPO
         }
         //upate not needed
         //delete items from list
+        
         public bool DeleteItemsFromMenu(int id)
         {
             foreach (var item in _listOfItems)
@@ -47,6 +48,7 @@ namespace KomodoCafe.REPO
             }
             return false;
         }
+        
         //helper method
         private CafeItemPoco GetItemByNumber(int id)
         {
