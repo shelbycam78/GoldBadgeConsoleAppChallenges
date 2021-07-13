@@ -55,7 +55,7 @@ namespace KomodoClaimsMENU
             {
                 Console.WriteLine($"{claim.ClaimID}" +
                                   "     " +
-                                  $"{ClaimType}" +
+                                  $"{claim.TypeOfClaim}" +
                                   "     " +
                                   $"{claim.Description}" +
                                   "     " +
@@ -79,37 +79,38 @@ namespace KomodoClaimsMENU
             Claim newClaim = new Claim();
 
             Console.WriteLine("Enter the claim ID:");
-            newClaim.ClaimID = Console.ReadLine();
+            newClaim.ClaimID = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter the claim type:");
-            newClaim.TypeOfClaim = Console.ReadLine();
+            Console.WriteLine("Enter the claim type - 1 = Car, 2 = Home, 3 = Theft");
+            int claimTypeNumber = int.Parse(Console.ReadLine());
+            newClaim.TypeOfClaim = (ClaimType)claimTypeNumber;
 
             Console.WriteLine("Enter a claim description:");
             newClaim.Description = Console.ReadLine();
 
             Console.WriteLine("Enter amount of damage:");
-            newClaim.Amount = Console.ReadLine();
+            newClaim.Amount = decimal.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter date of incident:");
-            newClaim.DateOfIncident = Console.ReadLine();
+            newClaim.DateOfIncident = DateTime.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter date of claim:");
-            newClaim.DateOfClaim = Console.ReadLine();
+            newClaim.DateOfClaim = DateTime.Parse(Console.ReadLine());
 
             Console.WriteLine("Is this claim valid?");
-            newClaim.IsValid = Console.ReadLine();
-
+            newClaim.IsValid = bool.Parse(Console.ReadLine());
+            //do the math here to figure out if the claim is valid:  incident + 30 days 
 
         }
 
         private void SeedClaims()
         {
-            var claimA = new Claim($"{ 1 }", $"{Car}", "Car accident on 465", $"${400.00}", $"{4/25/18}",
-                                   $"{4/27/18}", $"{true}");
-            Claim claimB = new Claim($"{2}", $"{Home}", "House fire in kitchen", $"${4000.00}", $"{4/11/18}",
-                                     $"{4/12/18}", $"{true}");
-            Claim claimC = new Claim($"{3}", $"{Theft}", "Stolen pancakes", $"${4.00}", $"{4 / 27 / 18}",
-                                     $"{6 / 01 / 18}", $"{false}");
+            var claimA = new Claim(1, ClaimType.Car, "Car accident of 465", 400.00, 4/25/18, 4/27/18, true);
+            Claim claimB = new Claim(2, ClaimType.Home, "House fire in Kitchen", 4000.00, 4/11/18, 4/12/18, true);
+            Claim claimC = new Claim(3, ClaimType.Theft, "Stolen pancakes.", 4.00, 4/27/18, 6/01/18, false);
+        //
         }
+
+
     }
 }

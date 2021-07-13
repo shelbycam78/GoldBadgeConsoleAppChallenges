@@ -53,5 +53,10 @@ namespace KomodoClaims.REPO
         {
             return _claimQueue;
         }
+
+        public void GetNextClaimReady()
+        {
+            _claimQueue.Peek();
+        }
     }
 }
