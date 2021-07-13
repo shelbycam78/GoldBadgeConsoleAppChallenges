@@ -60,6 +60,10 @@
       <Project>{B354B00F-EF71-41FF-803D-E336107ACCDF}</Project>
       <Name>KomodoCafe.POCO</Name>
     </ProjectReference>
+    <ProjectReference Include="..\KomodoCafe.REPO\KomodoCafe.REPO.csproj">
+      <Project>{0cad429c-d9e6-45ae-9c65-f4aca2dffca6}</Project>
+      <Name>KomodoCafe.REPO</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
