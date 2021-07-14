@@ -69,7 +69,7 @@ namespace KomodoCafeMenu
 
             //number, name, info(description), ingredients, cost
 
-            Console.WriteLine("Please enter a Name for the dish:.");
+            Console.WriteLine("Please enter a Name for the dish:");
             newCafeItem.Name = Console.ReadLine();
 
             Console.WriteLine("Please enter a description of the dish:");

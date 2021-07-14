@@ -11,7 +11,7 @@ namespace KomodoClaimsMENU
     class ProgramUI
     {
         private ClaimRepo _claimRepo = new ClaimRepo();
-
+        
         public void Run()
         {
             SeedClaims();
@@ -47,10 +47,17 @@ namespace KomodoClaimsMENU
                 Console.ReadKey();
             }
         }
+
+        
         private void GetClaimsList()
         {
+            
+        
+        }
+        private void GetClaimsQueue()
+        {
             Console.Clear();
-            List<Claim> _listOfClaims = _claimRepo.GetClaimsList();
+            Queue<Claim> _listOfClaims = _claimRepo.GetClaimsInQueue();
             foreach (Claim claim in _listOfClaims)
             {
                 Console.WriteLine($"{claim.ClaimID}" +
@@ -69,48 +76,50 @@ namespace KomodoClaimsMENU
             }
 
             Console.ReadKey();
-        
-        }
-        private void GetClaimsQueue()
-        {
         }
         private void AddClaimToList()
         {
-            Claim newClaim = new Claim();
-
-            Console.WriteLine("Enter the claim ID:");
-            newClaim.ClaimID = int.Parse(Console.ReadLine());
-
+            //Claim newClaim = new Claim();
+     
             Console.WriteLine("Enter the claim type - 1 = Car, 2 = Home, 3 = Theft");
             int claimTypeNumber = int.Parse(Console.ReadLine());
-            newClaim.TypeOfClaim = (ClaimType)claimTypeNumber;
+            var claimType = (ClaimType)claimTypeNumber;
 
             Console.WriteLine("Enter a claim description:");
-            newClaim.Description = Console.ReadLine();
+            var claimDescription = Console.ReadLine();
 
             Console.WriteLine("Enter amount of damage:");
-            newClaim.Amount = decimal.Parse(Console.ReadLine());
+            var claimAmount = decimal.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter date of incident:");
-            newClaim.DateOfIncident = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Enter date of incident - m/d/yy:");
+            var claimDateOfIncident = DateTime.Parse(Console.ReadLine());
 
-            Console.WriteLine("Enter date of claim:");
-            newClaim.DateOfClaim = DateTime.Parse(Console.ReadLine());
+            Console.WriteLine("Enter date of claim - m/d/yy:");
+            var claimDateOfClaim = DateTime.Parse(Console.ReadLine());
 
-            Console.WriteLine("Is this claim valid?");
-            newClaim.IsValid = bool.Parse(Console.ReadLine());
-            //do the math here to figure out if the claim is valid:  incident + 30 days 
+            Claim claim = new Claim(claimType, claimDescription, claimAmount, claimDateOfIncident, claimDateOfClaim);
 
+            var success = _claimRepo.AddClaimToQueue(claim);
+            if (success)
+            {
+                Console.WriteLine("Claim has been successfully added.");
+            }
+            else
+            {
+                Console.WriteLine("Failed.  Try again.");
+            }
         }
 
         private void SeedClaims()
         {
-            var claimA = new Claim(1, ClaimType.Car, "Car accident of 465", 400.00, 4/25/18, 4/27/18, true);
-            Claim claimB = new Claim(2, ClaimType.Home, "House fire in Kitchen", 4000.00, 4/11/18, 4/12/18, true);
-            Claim claimC = new Claim(3, ClaimType.Theft, "Stolen pancakes.", 4.00, 4/27/18, 6/01/18, false);
-        //
+            var claimA = new Claim(ClaimType.Car, "Car accident of 465", decimal.Parse("$400.00"),
+                                   DateTime.Parse("4/25/18"), DateTime.Parse("4/27/18"));
+
+            Claim claimB = new Claim(ClaimType.Home, "House fire in Kitchen", decimal.Parse("$4000.00"),
+                                     DateTime.Parse("4/11/18"), DateTime.Parse("4/12/18"));
+
+            Claim claimC = new Claim(ClaimType.Theft, "Stolen pancakes.", decimal.Parse("4.00"),
+                                     DateTime.Parse("4/27/18"), DateTime.Parse("6/01/18"));        
         }
-
-
     }
 }
