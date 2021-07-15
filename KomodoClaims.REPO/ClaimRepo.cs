@@ -29,10 +29,6 @@ namespace KomodoClaims.REPO
                 return true;
             }
         }
-
-        
-
-        
         public Queue<Claim> GetClaimsQueue()
         {
             return _claimQueue;
@@ -48,9 +44,18 @@ namespace KomodoClaims.REPO
             return null;
         }
 
-        public Queue<Claim> GetClaimsInQueue()
+        public bool ProcessClaim()
         {
-            return _claimQueue;
+            if (_claimQueue.Count  <= 0)
+            {
+                return false;
+            }
+            else
+            {
+                _claimQueue.Dequeue();
+                return true;
+            }
+          
         }
     }
 }

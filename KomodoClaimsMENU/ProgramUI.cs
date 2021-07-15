@@ -11,7 +11,7 @@ namespace KomodoClaimsMENU
     class ProgramUI
     {
         private ClaimRepo _claimRepo = new ClaimRepo();
-        
+
         public void Run()
         {
             SeedClaims();
@@ -47,17 +47,10 @@ namespace KomodoClaimsMENU
                 Console.ReadKey();
             }
         }
-
-        
         private void GetClaimsList()
         {
             
-        
-        }
-        private void GetClaimsQueue()
-        {
-            Console.Clear();
-            Queue<Claim> _listOfClaims = _claimRepo.GetClaimsInQueue();
+            Queue<Claim> _listOfClaims = _claimRepo.GetClaimsQueue();
             foreach (Claim claim in _listOfClaims)
             {
                 Console.WriteLine($"{claim.ClaimID}" +
@@ -74,13 +67,46 @@ namespace KomodoClaimsMENU
                                   "     " +
                                   $"{claim.IsValid}");
             }
+            Console.WriteLine("Press any key to return to continue.");    
+        }
+        private void GetClaimsQueue()
+        {
+            Console.Clear();
+            Claim claim = _claimRepo.GetNextClaimReady();
+            Console.WriteLine($"{claim.ClaimID}" +
+                                  "     " +
+                                  $"{claim.TypeOfClaim}" +
+                                  "     " +
+                                  $"{claim.Description}" +
+                                  "     " +
+                                  $"{claim.Amount}" +
+                                  "     " +
+                                  $"{claim.DateOfIncident}" +
+                                  "     " +
+                                  $"{claim.DateOfClaim}" +
+                                  "     " +
+                                  $"{claim.IsValid}");
+            Console.WriteLine("Do you want to deal with this claim now? y/n");
+            string input = Console.ReadLine().ToLower();
+            if (input == "y")
+            {
+                var success = _claimRepo.ProcessClaim();
+                if (success)
+                {
+                    Console.WriteLine("The claim has been processed.");
+                }
+                else
+                {
+                    Console.WriteLine("The claim failed to be processed.");
+                }
+            }
+            else Run();
 
             Console.ReadKey();
         }
         private void AddClaimToList()
         {
-            //Claim newClaim = new Claim();
-     
+            
             Console.WriteLine("Enter the claim type - 1 = Car, 2 = Home, 3 = Theft");
             int claimTypeNumber = int.Parse(Console.ReadLine());
             var claimType = (ClaimType)claimTypeNumber;
@@ -102,24 +128,29 @@ namespace KomodoClaimsMENU
             var success = _claimRepo.AddClaimToQueue(claim);
             if (success)
             {
-                Console.WriteLine("Claim has been successfully added.");
+                Console.WriteLine("The claim is valid and has been successfully added.");
             }
             else
             {
-                Console.WriteLine("Failed.  Try again.");
+                Console.WriteLine("This claim is not valid.");
             }
         }
 
         private void SeedClaims()
         {
-            var claimA = new Claim(ClaimType.Car, "Car accident of 465", decimal.Parse("$400.00"),
+            var claimA = new Claim(ClaimType.Car, "Car accident of 465", decimal.Parse("400.00"),
                                    DateTime.Parse("4/25/18"), DateTime.Parse("4/27/18"));
 
-            Claim claimB = new Claim(ClaimType.Home, "House fire in Kitchen", decimal.Parse("$4000.00"),
+            Claim claimB = new Claim(ClaimType.Home, "House fire in Kitchen", decimal.Parse("4000.00"),
                                      DateTime.Parse("4/11/18"), DateTime.Parse("4/12/18"));
 
             Claim claimC = new Claim(ClaimType.Theft, "Stolen pancakes.", decimal.Parse("4.00"),
-                                     DateTime.Parse("4/27/18"), DateTime.Parse("6/01/18"));        
+                                     DateTime.Parse("4/27/18"), DateTime.Parse("6/01/18"));
+
+            _claimRepo.AddClaimToQueue(claimA);
+            _claimRepo.AddClaimToQueue(claimB);
+            _claimRepo.AddClaimToQueue(claimC);
+
         }
     }
 }

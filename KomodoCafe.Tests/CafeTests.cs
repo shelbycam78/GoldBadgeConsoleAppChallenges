@@ -18,8 +18,8 @@ namespace KomodoCafe.Tests
             _repo = new CafeItemRepo();
             _dish = new CafeItemPoco();
 
-            _repo.AddItemsToMenu(
-                );
+            _repo.AddItemsToMenu(new CafeItemPoco());
+                
         }
 
         [TestMethod]

@@ -1,0 +1,9 @@
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\bin\Debug\KomodoClaims.REPO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\bin\Debug\KomodoClaims.REPO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\bin\Debug\KomodoClaims.POCO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\bin\Debug\KomodoClaims.POCO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\obj\Debug\KomodoClaims.REPO.csproj.AssemblyReference.cache
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\obj\Debug\KomodoClaims.REPO.csproj.CoreCompileInputs.cache
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\obj\Debug\KomodoClaims.REPO.csproj.CopyComplete
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\obj\Debug\KomodoClaims.REPO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaims.REPO\obj\Debug\KomodoClaims.REPO.pdb

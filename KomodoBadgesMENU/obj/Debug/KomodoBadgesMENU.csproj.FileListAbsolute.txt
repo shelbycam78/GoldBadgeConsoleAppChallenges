@@ -1,0 +1,7 @@
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoBadgesMENU.exe.config
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoBadgesMENU.exe
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoBadgesMENU.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.csproj.AssemblyReference.cache
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.csproj.CoreCompileInputs.cache
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.exe
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.pdb

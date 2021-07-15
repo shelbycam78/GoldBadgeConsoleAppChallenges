@@ -10,7 +10,7 @@ namespace KomodoClaimsMENU
     {
         static void Main(string[] args)
         {
-            ProgramUI program = new ProgramUI;
+            ProgramUI program = new ProgramUI();
             program.Run();
         }
     }
