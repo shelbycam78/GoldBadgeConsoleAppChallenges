@@ -50,7 +50,7 @@ namespace KomodoCafe.REPO
         }
         
         //helper method
-        private CafeItemPoco GetItemByNumber(int id)
+        public CafeItemPoco GetItemByNumber(int id)
         {
             foreach (CafeItemPoco item in _listOfItems)
             {

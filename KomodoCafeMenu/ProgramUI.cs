@@ -46,9 +46,8 @@ namespace KomodoCafeMenu
                         DisplayDishList();
                         break;
                     case "4":
-                        System.Console.WriteLine("Goodbye");
+                        Console.WriteLine("Goodbye");
                         break;
-
 
                     default:
                         System.Console.WriteLine("Please enter a valid number.");
@@ -63,12 +62,9 @@ namespace KomodoCafeMenu
 
         private void AddDishToMenu()
         {
-            CafeItemPoco newCafeItem = new CafeItemPoco();
-
-            Console.Clear();
+            CafeItemPoco newCafeItem = new CafeItemPoco();         
 
             //number, name, info(description), ingredients, cost
-
             Console.WriteLine("Please enter a Name for the dish:");
             newCafeItem.Name = Console.ReadLine();
 
@@ -83,19 +79,17 @@ namespace KomodoCafeMenu
             while (whileRunning)
             {
                 Console.WriteLine("Do you have more ingredients to add? (y/n)");
-                string input = Console.ReadLine().ToLower();
+                var input = Console.ReadLine().ToLower();
 
                 if (input == "y")
                 {
                     Console.WriteLine("Enter the next ingredient:");
-                    string ingredient2 = Console.ReadLine();
+                    var ingredient2 = Console.ReadLine();
                     newCafeItem.Ingredients.Add(ingredient2);
                 }
                 else if (input == "n")
                 {
                     whileRunning = false;
-                    Console.Clear();
-                    break;
                 }
                 else
                 {
@@ -123,11 +117,6 @@ namespace KomodoCafeMenu
             //call delete method
             _cafeItemREPO.DeleteItemsFromMenu(id);
 
-
-
-
-
-
             Console.ReadKey();
         }
         private void DisplayDishList()
@@ -138,24 +127,26 @@ namespace KomodoCafeMenu
             {
                 Console.WriteLine($"#{dish.Number}\n" +
                                   $"{dish.Name} ------- {dish.Cost}\n" +
-                                  $"{dish.Info}\n" +
-                                  $"{dish.Ingredients}\n");
+                                  $"{dish.Info}\n");
+                foreach (var item in dish.Ingredients)
+                {
+                    Console.WriteLine($"{item}");
+                }
+                                
             }
-
-            Console.ReadKey();
         }
 
-        /*private void SeedCafeItems()
-        {
-            var dishA = new CafeItemPoco("Grilled Cheese", "$8.99", "Childhood ain't cheap but it sure tastes good.", "2 slices of bread without crust, 2 kraft cheese slices");
-            CafeItemPoco dishB = new CafeItemPoco("Apple Slices", "$3.99/lb", "Your choice of apple -- Pink Delicious, Granny Smith, HoneyCrisp.", "apple");
-            CafeItemPoco dishC = new CafeItemPoco("Ceasar Salad", "12.99", "No going halvsies.  You get the big salad.", $"{dishC.Ingredients}");
-            CafeItemPoco dishD = new CafeItemPoco();
+        //private void SeedCafeItems()
+        //{
+        //    var dishA = new CafeItemPoco("Grilled Cheese", $"{ dishA.Cost}", , "Childhood ain't cheap but it sure tastes good.", "2 slices of bread without crust, 2 kraft cheese slices");
+        //    CafeItemPoco dishB = new CafeItemPoco("Apple Slices", "$3.99/lb", "Your choice of apple -- Pink Delicious, Granny Smith, HoneyCrisp.", "apple");
+        //    CafeItemPoco dishC = new CafeItemPoco("Ceasar Salad", "12.99", "No going halvsies.  You get the big salad.", $"{dishC.Ingredients}");
+        //    CafeItemPoco dishD = new CafeItemPoco();
 
-            _cafeItemREPO.AddItemsToMenu(dishA);
-            _cafeItemREPO.AddItemsToMenu(dishB);
-            _cafeItemREPO.AddItemsToMenu(dishC);
-            _cafeItemREPO.AddItemsToMenu(dishD);
-        }*/
+        //    _cafeItemREPO.AddItemsToMenu(dishA);
+        //    _cafeItemREPO.AddItemsToMenu(dishB);
+        //    _cafeItemREPO.AddItemsToMenu(dishC);
+        //    _cafeItemREPO.AddItemsToMenu(dishD);
+        //}*/
     }
 }

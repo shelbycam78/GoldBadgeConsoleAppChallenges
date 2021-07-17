@@ -11,24 +11,6 @@ namespace KomodoBadges.REPO
     {
         private int _Count = 0;
         Dictionary<int, List<string>> _myDictionary = new Dictionary<int, List<string>>();
-
-        //fake database for us
-        List<Badge> _listOfBadges = new List<Badge>();
-
-        private bool AddBadgeToList(Badge badge)
-        {
-            if (badge == null)
-            {
-                return false;
-            }
-            else
-            {
-                _Count++;
-                badge.BadgeID = _Count;
-                _listOfBadges.Add(badge);
-                return true;
-            }
-        }
         public bool AddBadgeToDictionary(Badge badge)
         {
             if (badge == null)
@@ -42,14 +24,6 @@ namespace KomodoBadges.REPO
                 return true;
             }
         }
-        
-
-        //show list
-
-        public List<Badge> ListBadges()
-        {
-            return _listOfBadges;
-        }
 
         //show queue
         public Dictionary<int, List<string>> ListDictionary()
@@ -59,17 +33,21 @@ namespace KomodoBadges.REPO
 
 
         //update badges - add door, remove door, remove all doors, return to menu
-        public void EditBadge()
+        public void EditBadge(Badge badge)
         {
-            foreach (KeyValuePair<int,List<string>> keyValuePair in _myDictionary)
-            {
-                if (keyValuePair.Key == badgeID)
-                {
-                    keyvaluepair[key] = Badge.DoorNames
-                }
-            }
             
-                //similar forach as badge by id
+                if (_myDictionary.ContainsKey(badge.BadgeID))
+                {
+                    _myDictionary[badge.BadgeID] = badge.DoorNames;
+                }
+                else
+                {
+                    _myDictionary.Add(badge.BadgeID, badge.DoorNames);
+                }
+                
+
+
+            //similar forach as badge by id
         }
         //delete all rooms from badge
         public void DeleteDoors()

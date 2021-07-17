@@ -12,3 +12,7 @@ C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\obj\
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\obj\Debug\KomodoClaims.Tests.csproj.CopyComplete
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\obj\Debug\KomodoClaimsTests.dll
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\obj\Debug\KomodoClaimsTests.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\bin\Debug\KomodoClaims.POCO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\bin\Debug\KomodoClaims.REPO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\bin\Debug\KomodoClaims.POCO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoClaimsTests\bin\Debug\KomodoClaims.REPO.pdb

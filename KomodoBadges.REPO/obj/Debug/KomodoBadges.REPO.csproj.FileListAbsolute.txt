@@ -4,3 +4,6 @@ C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadges.REPO\obj\
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadges.REPO\obj\Debug\KomodoBadges.REPO.csproj.CoreCompileInputs.cache
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadges.REPO\obj\Debug\KomodoBadges.REPO.dll
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadges.REPO\obj\Debug\KomodoBadges.REPO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadges.REPO\bin\Debug\KomodoBadges.POCO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadges.REPO\bin\Debug\KomodoBadges.POCO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadges.REPO\obj\Debug\KomodoBadges.REPO.csproj.CopyComplete

@@ -5,3 +5,15 @@ C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\D
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.csproj.CoreCompileInputs.cache
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.exe
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoBadges.POCO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoBadges.REPO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoClaimsMENU.exe
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoClaims.REPO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoClaims.POCO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoBadges.POCO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoBadges.REPO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoClaimsMENU.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoClaimsMENU.exe.config
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoClaims.REPO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\bin\Debug\KomodoClaims.POCO.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoBadgesMENU\obj\Debug\KomodoBadgesMENU.csproj.CopyComplete

@@ -55,6 +55,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\KomodoBadges.POCO\KomodoBadges.POCO.csproj">
+      <Project>{5008DF33-C2A2-43D5-9FE4-4ADCC67D8474}</Project>
+      <Name>KomodoBadges.POCO</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\KomodoBadges.REPO\KomodoBadges.REPO.csproj">
+      <Project>{6FA4CC3D-DEE1-40C7-96B5-BB279CD55360}</Project>
+      <Name>KomodoBadges.REPO</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets" Condition="Exists('$(VSToolsPath)\TeamTest\Microsoft.TestTools.targets')" />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">

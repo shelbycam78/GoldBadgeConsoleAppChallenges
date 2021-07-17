@@ -34,23 +34,22 @@ namespace KomodoBadges.Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void GetClaimByClaimIDTest()
+        public void GetBadgeByBadgeIDTest()
         {
-            Claim claimNumber = new Claim();
-            claimNumber.ClaimID = 1;
+            Badge badgeID = new Badge();
+            badgeID.BadgeID = 1;
 
             int expected = 1;
-            int actual = claimNumber.ClaimID;
+            int actual = badgeID.BadgeID;
 
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void ProcessClaimTest()
+        public void EditBadgeTest()
         {
-            Claim newClaim = new Claim(ClaimType.Car, "Car accident of 465", decimal.Parse("400.00"),
-                                   DateTime.Parse("4/25/18"), DateTime.Parse("4/27/18"));
+            Badge newBadge = new Badge(22345, new Badge);
 
-            bool updateResult = _repo.ProcessClaim(ClaimType.Car, newClaim);
+            bool updateResult =
 
             Assert.IsTrue(updateResult);
         }

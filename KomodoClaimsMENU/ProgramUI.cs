@@ -90,7 +90,7 @@ namespace KomodoClaimsMENU
             string input = Console.ReadLine().ToLower();
             if (input == "y")
             {
-                var success = _claimRepo.ProcessClaim();
+                var success = _claimRepo.ProcessClaim(ClaimType.Car, claim);
                 if (success)
                 {
                     Console.WriteLine("The claim has been processed.");
@@ -114,7 +114,7 @@ namespace KomodoClaimsMENU
             Console.WriteLine("Enter a claim description:");
             var claimDescription = Console.ReadLine();
 
-            Console.WriteLine("Enter amount of damage:");
+            Console.WriteLine("Enter amount of damage (40000.00, 1000, .90, etc):");
             var claimAmount = decimal.Parse(Console.ReadLine());
 
             Console.WriteLine("Enter date of incident - m/d/yy:");
