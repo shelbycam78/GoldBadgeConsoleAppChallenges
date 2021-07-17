@@ -14,3 +14,5 @@ C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoCafe.Tests\obj\D
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoCafe.Tests\obj\Debug\KomodoCafe.Tests.csproj.CopyComplete
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoCafe.Tests\obj\Debug\KomodoCafe.Tests.dll
 C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoCafe.Tests\obj\Debug\KomodoCafe.Tests.pdb
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoCafe.Tests\bin\Debug\KomodoCafe.REPO.dll
+C:\Users\shelb\source\repos\GoldBadgeConsoleAppChallenges\KomodoCafe.Tests\bin\Debug\KomodoCafe.REPO.pdb

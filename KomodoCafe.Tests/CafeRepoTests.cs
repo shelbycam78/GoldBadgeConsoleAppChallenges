@@ -6,7 +6,7 @@ using System;
 namespace KomodoCafe.Tests
 {
     [TestClass]
-    public class CafeTests
+    public class CafeRepoTests
     {
         private CafeItemRepo _repo;
         private CafeItemPoco _dish;
@@ -34,10 +34,24 @@ namespace KomodoCafe.Tests
             Assert.AreEqual(expected, actual);
         }
         [TestMethod]
-        public void GetDishList()
+        public void GetItemByNumberTest()
         {
-           
+            CafeItemPoco dishNumber = new CafeItemPoco();
+            dishNumber.Number = 1 ;
 
+            int expected = 1;
+            int actual = dishNumber.Number;
+
+            Assert.AreEqual(expected, actual);
         }
+        [TestMethod]
+        public void DeleteDishTest()
+        {
+
+            bool deleteResult = _repo.DeleteItemsFromMenu(_dish.Number);
+
+            Assert.IsTrue(deleteResult);
+        }
+        
     }
 }

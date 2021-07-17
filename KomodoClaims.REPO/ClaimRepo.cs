@@ -44,7 +44,7 @@ namespace KomodoClaims.REPO
             return null;
         }
 
-        public bool ProcessClaim()
+        public bool ProcessClaim(ClaimType car, Claim newClaim)
         {
             if (_claimQueue.Count  <= 0)
             {
